@@ -1,0 +1,3 @@
+function stringBomb(unTexto) {
+  
+}
