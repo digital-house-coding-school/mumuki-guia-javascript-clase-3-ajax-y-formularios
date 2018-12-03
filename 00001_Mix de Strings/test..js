@@ -18,4 +18,26 @@ describe("Ejercicio 1", function() {
     
     assert(output === "Juan,Marta", "Si bien la cantidad de nombres es la correcta no se recibie el string esperado. Se esperaba 'Juan,Marta' y se recibió '" + output + "'")
   })
+  
+  it("Test 2", function() {
+    var input = "Juan    ,    Sol  ,  Pepe, Marta,    Dan,    Iñaki  "
+    
+    var output = stringBomb(input)
+    
+    assert(typeof output === "string", "La función debe retornar un string")
+    
+    assert(output.indexOf(",") !== -1, "No hay ninguna coma en el string resultado y los nombres deberían estar separados por comas")
+    
+    assert(output.indexOf("Dan") === -1, "El nombre 'Dan' no debería estar en el resultado ya que NO tiene más de 3 caracteres. No olvides dicha validación y de hacer el trim de antemano")
+    
+    assert(output.indexOf("Pepe") === -1, "El nombre 'Pepe' no debería estar en el resultado ya que NO tiene la letra A minúscula. No olvides dicha validación")
+    
+    assert(output.indexOf("Iñaki") === -1, "El nombre 'Iñaki' debería figurar en el resultado como 'Inaki'")
+    
+    var nombres = output.split(",")
+    
+    assert(nombres.length === 3, "La cantidad de nombres retornados no es la correcta")
+    
+    assert(output === "Juan,Marta,Inaki", "Si bien la cantidad de nombres es la correcta no se recibie el string esperado. Se esperaba 'Juan,Marta' y se recibió '" + output + "'")
+  })
 })
