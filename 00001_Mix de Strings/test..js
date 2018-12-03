@@ -6,7 +6,7 @@ describe("Ejercicio 1", function() {
     
     assert(typeof output === "string", "La función debe retornar un string")
     
-    assert(output.indexOf(",") === -1, "Hay comas en el resultado. ¡Acordate que en el resultado final queremos que los nombres esten divididos por espacios!")
+    assert(output.indexOf(",") === -1, "Hay comas en el resultado. ¡Acordate que en el resultado final queremos que los nombres esten divididos por espacios!" + output)
     
     assert(output.indexOf(" ") !== -1, "No hay ningún espacio en el string resultado y los nombres deberían estar separados por espacios")
     
