@@ -13,6 +13,7 @@ describe("Ejercicio 1", function() {
     assert(output.indexOf("Pepe") === -1, "El nombre 'Pepe' no debería estar en el resultado ya que NO tiene la letra A minúscula. No olvides dicha validación")
     
     var nombres = output.split(",")
+    assert(false, nombres)
     
     assert(output.length === 2, "La cantidad de nombres retornados no es la correcta" + output)
     
