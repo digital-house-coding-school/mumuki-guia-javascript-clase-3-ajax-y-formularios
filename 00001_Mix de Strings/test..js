@@ -4,6 +4,6 @@ describe("Ejercicio 1", function() {
     
     var output = stringBomb(input)
     
-    assert(typeof output === string, "La función debe retornar un string")
+    assert(typeof output === "string", "La función debe retornar un string")
   })
 })
