@@ -1,6 +1,6 @@
 describe("Ejercicio 1", function() {
   it("Test 1", function() {
-    var input = "Juan,    Sol  ,  Pepe, Marta,    Dan"
+    var input = "Juan    ,    Sol  ,  Pepe, Marta,    Dan"
     
     var output = stringBomb(input)
     
@@ -16,6 +16,6 @@ describe("Ejercicio 1", function() {
     
     assert(nombres.length === 2, "La cantidad de nombres retornados no es la correcta")
     
-    assert(output === "Juan Marta", "Si bien la cantidad de nombres es la correcta no se recibie el string esperado. Se esperaba 'Juan Marta' y se recibió '" + output + "'")
+    assert(output === "Juan,Marta", "Si bien la cantidad de nombres es la correcta no se recibie el string esperado. Se esperaba 'Juan Marta' y se recibió '" + output + "'")
   })
 })
