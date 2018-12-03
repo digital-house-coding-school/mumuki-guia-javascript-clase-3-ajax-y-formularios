@@ -14,7 +14,7 @@ describe("Ejercicio 1", function() {
     
     var nombres = output.split(",")
     
-    assert(output.length === 2, "La cantidad de nombres retornados no es la correcta")
+    assert(output.length === 2, "La cantidad de nombres retornados no es la correcta" + output)
     
     assert(output === "Juan Marta", "Si bien la cantidad de nombres es la correcta no se recibie el string esperado. Se esperaba 'Juan Marta' y se recibió '" + output + "'")
   })
