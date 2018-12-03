@@ -12,12 +12,10 @@ La función debe hacer lo siguiente:
 
 > 2. Por cada uno de los nombres, quitarle los espacios que sobren. Esto podes hacerlo mediante la función `trim`
 
-> 3. Generar un nuevo array que contenga únicamente los nombres que tengan más de 3 caracteres y que incluyan la letra **A** minúscula. Esto podes hacerlo mediante los métodos `length` e `indexOf`. Para esto tendrás que preguntar las condiciones para **cada uno** de los elementos e ir agregando los valores que pasen el filtro al array nuevo. No olvides usar `push`
+> 3. Generar un nuevo array que contenga únicamente los nombres que tengan más de 3 caracteres y que incluyan la letra **A** minúscula. Esto podes hacerlo mediante los métodos `length` e `indexOf`. Para esto tendrás que preguntar las condiciones para **cada uno** de los elementos e ir agregando los valores que pasen el filtro al array nuevo. No olvides usar `push`. **Además**, si hubiese una "ñ" en el nombre, vamos a reemplazarla por una "n" para asegurar compatibilidad de encoding.
 
 > 4. Convertir el array resultado en un string mediante el método `toString`
 
-> 5. `toString` genera un string con los elementos separados por comas. Te pedimos que reemplaces esas comas por un espacio. Esto podes hacerlo mediante el método `replace`
-
-> 6. Finalmente retorna el string resultado
+> 5. Finalmente retorna el string resultado
 
 ¡Éxitos!
