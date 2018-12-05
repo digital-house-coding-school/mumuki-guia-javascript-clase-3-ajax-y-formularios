@@ -10,15 +10,13 @@ describe("Ejercicio 2", function() {
     
     assert(typeof miAuto === "string", "La función debe retornar un string")
     
-    assert(false, "sarasa")
-    
-    miAuto = JSON.parse(miAuto)
-    
-    
+    try {
+      miAuto = JSON.parse(miAuto)
+    } catch (e) {
+      assert(false, "El string devuelto no es un JSON válido")
+    }
     
     assert(typeof miAuto === 'object', "El string devuelto no parecería representar un objeto válido de JS. ¿Es un JSON válido?")
-    
-    
     
     assert('marca' in miAuto, "El objeto devuelto no tiene marca.")
     
