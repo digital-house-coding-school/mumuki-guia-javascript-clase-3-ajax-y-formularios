@@ -268,13 +268,7 @@
     .get("/api/v2/type/")
     .reply(200, tipos);
     
-    const mockedGetFairy = _nock_("https://pokeapi.co")
-    .get("/api/v2/type/18")
-    .reply(200, ataquesFairy);
-    
-    const mockedGetDragon = _nock_("https://pokeapi.co")
-    .get("/api/v2/type/16")
-    .reply(200, ataquesDragon);
+ 
     
   _dispatch_('load', document);
   
