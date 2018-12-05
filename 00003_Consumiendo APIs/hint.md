@@ -8,8 +8,6 @@ window.addEventListener("load", function() {
   }).then(function(data) {
     var cursos = data.data;
      
-  }).catch(function(error) {
-    
   })
 })
 ```
