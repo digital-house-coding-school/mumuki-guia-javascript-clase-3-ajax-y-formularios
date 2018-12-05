@@ -1,3 +1,5 @@
+**Aclaración: Los errores de este ejercicio no se visualizan tan lindos como nos gustaría. Prestale atención al texto en negrita y subrayado para encontrar una buena pista**
+
 Para este ejercicio finalmente vamos a implementar AJAX consumiento una API externa. La URL de esta API será **"https://dev.digitalhouse.com/api/getCursos"**
 
 Es importante, antes de continuar el formato de retorno de esta API. Una respuesta se vería así:

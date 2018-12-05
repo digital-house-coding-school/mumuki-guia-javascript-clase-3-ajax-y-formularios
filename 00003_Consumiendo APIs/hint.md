@@ -13,3 +13,7 @@ window.addEventListener("load", function() {
   })
 })
 ```
+
+En este caso la variable cursos es un array de objetos literales.
+
+Cada uno de estos objetos tiene el atributo "curso" con el nombre que estas buscando :wink:
