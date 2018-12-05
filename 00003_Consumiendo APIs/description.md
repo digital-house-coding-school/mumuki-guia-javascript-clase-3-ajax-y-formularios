@@ -20,7 +20,7 @@ Dicho de otro modo: Si consultasemos la API retornaría un JSON con toda esta in
 
 ¿Cual es tu trabajo?
 
-Consumir esta API y agregarle al `<ul>` de nuestro HTML un `<li>` por cada uno de los tipos incluyendo el nombre del tipo como contenido.
+Consumir esta API y agregarle al `<ul>` de nuestro HTML un `<li>` por cada uno de los tipos incluyendo el nombre del tipo como contenido. No olvides utilizar `innerHTML`
 
 Dicho de otro modo, el `<ul>` debería verse así: 
 
