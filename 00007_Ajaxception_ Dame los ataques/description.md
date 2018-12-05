@@ -18,4 +18,6 @@ Tu desafío entonces es agregar en el evento definido para el `<li>` la siguient
 
 > 4. Una vez obtenido el array de ataques, **por cada uno** deberías agregar un `<li>` en el `<ul class="ataques">` que diga en el contenido el nombre del ataque. Cada uno de los ataques tiene un atributo "name" con el texto que necesitas
 
-¡Muchiiisimos éxitos!
+Lamentablemente, dado lo complejo del ejercicio, la plataforma nos queda corta para evaluar que la solución sea correcta, con lo cual este ejercicio oficia a modo de experimentación.
+
+En caso de que gustes, en la pista de acá abajo encontrarás la solución :wink:
