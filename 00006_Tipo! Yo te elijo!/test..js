@@ -112,13 +112,13 @@
     
     _dispatch_('click', document.querySelector("li"));
     
-    document.querySelector("p").innerHTML.should.eql(tipos.results[0].name + ": " tipos.results[0].url, "<b><u>Al clickear en el primer tipo no aparece el texto '" + tipos.results[0].name + ": " tipos.results[0].url + "'</u></b>")
+    document.querySelector("p").innerHTML.should.eql(tipos.results[0].name + ": " + tipos.results[0].url, "<b><u>Al clickear en el primer tipo no aparece el texto '" + tipos.results[0].name + ": " + tipos.results[0].url + "'</u></b>")
     
     document.querySelector("p").innerHTML = ""
     
     _dispatch_('click', document.querySelectorAll("li")[3]);
     
-    document.querySelector("p").innerHTML.should.eql(tipos.results[3].name + ": " tipos.results[3].url, "<b><u>Al clickear en el primer tipo no aparece el texto '" + tipos.results[3].name + ": " tipos.results[3].url + "'</u></b>")
+    document.querySelector("p").innerHTML.should.eql(tipos.results[3].name + ": " + tipos.results[3].url, "<b><u>Al clickear en el primer tipo no aparece el texto '" + tipos.results[3].name + ": " + tipos.results[3].url + "'</u></b>")
   });
 });/*#tests>*/
 /*<options#*/output_ignore_scripts: true
