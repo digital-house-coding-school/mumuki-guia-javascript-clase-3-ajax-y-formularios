@@ -9,7 +9,7 @@
   </head>
   <body>
     <h1>Mis Paises</h1>
-    <section>
+    <section class="principal">
       <ul>
         
       </ul>
