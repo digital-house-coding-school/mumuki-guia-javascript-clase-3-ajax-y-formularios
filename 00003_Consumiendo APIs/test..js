@@ -17,9 +17,7 @@
   });
   
   
-  while(ongoing) {
-    
-  }
+
   
   var cursos = [
     "Desarrollo Web Full Stack",
