@@ -8,7 +8,7 @@
     <script src="script.js"></script>
   </head>
   <body>
-    <h1>Mis Paises</h1>
+    <h1>Tipos de Pokemon!</h1>
     <section class="principal">
       <ul>
         
