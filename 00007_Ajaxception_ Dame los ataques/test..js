@@ -96,11 +96,17 @@
     
   _dispatch_('load', document);
   
-  _wait_for_(() => mockedGet.isDone(), function() {
+  try {
+    _wait_for_(() => mockedGet.isDone(), function() {
     
     
     
-  });
+    });
+  }
+  catch(err) {
+    
+  }
+  
 });/*#tests>*/
 /*<options#*/output_ignore_scripts: true
 output_ignore_styles: true/*#options>*/
