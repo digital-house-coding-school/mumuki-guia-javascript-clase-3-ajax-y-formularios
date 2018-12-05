@@ -96,7 +96,6 @@
     
   _dispatch_('load', document);
   
-  false.should.eql(true, typeof _wait_for_)
   
   try {
     _wait_for_(() => mockedGet.isDone(), function() {
