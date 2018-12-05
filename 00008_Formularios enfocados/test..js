@@ -4,7 +4,7 @@
   
   _dispatch_("focus", document.querySelectorAll("input")[0])
   
-  document.querySelectorAll("input")[0].style.border.should.eql("1px solid blue", "Al hacer foco sobre el primer input no se agrega el borde esperado")
+  document.querySelectorAll("input")[0].style.border.should.eql("3px solid blue", "Al hacer foco sobre el primer input no se agrega el borde esperado")
   
   _dispatch_("blur", document.querySelectorAll("input")[0])
   
@@ -12,7 +12,7 @@
   
   _dispatch_("focus", document.querySelectorAll("input")[1])
   
-  document.querySelectorAll("input")[1].style.border.should.eql("1px solid blue", "Al hacer foco sobre el primer input no se agrega el borde esperado")
+  document.querySelectorAll("input")[1].style.border.should.eql("3px solid blue", "Al hacer foco sobre el primer input no se agrega el borde esperado")
   
   _dispatch_("blur", document.querySelectorAll("input")[1])
   
