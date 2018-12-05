@@ -4,7 +4,7 @@
   _nock_.cleanAll();
   
   const mockedGet = _nock_("https://dev.digitalhouse.com")
-    .get("/api/getCursos")
+    .get("/api/getCursoss")
     .reply(200, {
       "data": [
         {
