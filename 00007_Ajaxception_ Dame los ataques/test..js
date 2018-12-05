@@ -2,6 +2,180 @@
 /*<tests#*/it("AJAX", function() {
   _nock_.cleanAll();
   
+  var ataquesFairy = {
+    "moves": [
+        {
+            "name": "sweet-kiss",
+            "url": "https://pokeapi.co/api/v2/move/186/"
+        },
+        {
+            "name": "charm",
+            "url": "https://pokeapi.co/api/v2/move/204/"
+        },
+        {
+            "name": "moonlight",
+            "url": "https://pokeapi.co/api/v2/move/236/"
+        },
+        {
+            "name": "disarming-voice",
+            "url": "https://pokeapi.co/api/v2/move/574/"
+        },
+        {
+            "name": "draining-kiss",
+            "url": "https://pokeapi.co/api/v2/move/577/"
+        },
+        {
+            "name": "crafty-shield",
+            "url": "https://pokeapi.co/api/v2/move/578/"
+        },
+        {
+            "name": "flower-shield",
+            "url": "https://pokeapi.co/api/v2/move/579/"
+        },
+        {
+            "name": "misty-terrain",
+            "url": "https://pokeapi.co/api/v2/move/581/"
+        },
+        {
+            "name": "play-rough",
+            "url": "https://pokeapi.co/api/v2/move/583/"
+        },
+        {
+            "name": "fairy-wind",
+            "url": "https://pokeapi.co/api/v2/move/584/"
+        },
+        {
+            "name": "moonblast",
+            "url": "https://pokeapi.co/api/v2/move/585/"
+        },
+        {
+            "name": "fairy-lock",
+            "url": "https://pokeapi.co/api/v2/move/587/"
+        },
+        {
+            "name": "aromatic-mist",
+            "url": "https://pokeapi.co/api/v2/move/597/"
+        },
+        {
+            "name": "geomancy",
+            "url": "https://pokeapi.co/api/v2/move/601/"
+        },
+        {
+            "name": "dazzling-gleam",
+            "url": "https://pokeapi.co/api/v2/move/605/"
+        },
+        {
+            "name": "baby-doll-eyes",
+            "url": "https://pokeapi.co/api/v2/move/608/"
+        },
+        {
+            "name": "light-of-ruin",
+            "url": "https://pokeapi.co/api/v2/move/617/"
+        },
+        {
+            "name": "twinkle-tackle--physical",
+            "url": "https://pokeapi.co/api/v2/move/656/"
+        },
+        {
+            "name": "twinkle-tackle--special",
+            "url": "https://pokeapi.co/api/v2/move/657/"
+        },
+        {
+            "name": "floral-healing",
+            "url": "https://pokeapi.co/api/v2/move/666/"
+        },
+        {
+            "name": "guardian-of-alola",
+            "url": "https://pokeapi.co/api/v2/move/698/"
+        },
+        {
+            "name": "fleur-cannon",
+            "url": "https://pokeapi.co/api/v2/move/705/"
+        },
+        {
+            "name": "natures-madness",
+            "url": "https://pokeapi.co/api/v2/move/717/"
+        }
+    ]
+  }
+  
+  var ataquesDragon = {
+    "moves": [
+        {
+            "name": "dragon-rage",
+            "url": "https://pokeapi.co/api/v2/move/82/"
+        },
+        {
+            "name": "outrage",
+            "url": "https://pokeapi.co/api/v2/move/200/"
+        },
+        {
+            "name": "dragon-breath",
+            "url": "https://pokeapi.co/api/v2/move/225/"
+        },
+        {
+            "name": "twister",
+            "url": "https://pokeapi.co/api/v2/move/239/"
+        },
+        {
+            "name": "dragon-claw",
+            "url": "https://pokeapi.co/api/v2/move/337/"
+        },
+        {
+            "name": "dragon-dance",
+            "url": "https://pokeapi.co/api/v2/move/349/"
+        },
+        {
+            "name": "dragon-pulse",
+            "url": "https://pokeapi.co/api/v2/move/406/"
+        },
+        {
+            "name": "dragon-rush",
+            "url": "https://pokeapi.co/api/v2/move/407/"
+        },
+        {
+            "name": "draco-meteor",
+            "url": "https://pokeapi.co/api/v2/move/434/"
+        },
+        {
+            "name": "roar-of-time",
+            "url": "https://pokeapi.co/api/v2/move/459/"
+        },
+        {
+            "name": "spacial-rend",
+            "url": "https://pokeapi.co/api/v2/move/460/"
+        },
+        {
+            "name": "dragon-tail",
+            "url": "https://pokeapi.co/api/v2/move/525/"
+        },
+        {
+            "name": "dual-chop",
+            "url": "https://pokeapi.co/api/v2/move/530/"
+        },
+        {
+            "name": "devastating-drake--physical",
+            "url": "https://pokeapi.co/api/v2/move/652/"
+        },
+        {
+            "name": "devastating-drake--special",
+            "url": "https://pokeapi.co/api/v2/move/653/"
+        },
+        {
+            "name": "core-enforcer",
+            "url": "https://pokeapi.co/api/v2/move/687/"
+        },
+        {
+            "name": "clanging-scales",
+            "url": "https://pokeapi.co/api/v2/move/691/"
+        },
+        {
+            "name": "dragon-hammer",
+            "url": "https://pokeapi.co/api/v2/move/692/"
+        }
+    ]
+  }
+  
   var tipos = {
     "count": 20,
     "next": null,
@@ -94,6 +268,14 @@
     .get("/api/v2/type/")
     .reply(200, tipos);
     
+    const mockedGetFairy = _nock_("https://pokeapi.co")
+    .get("/api/v2/type/18")
+    .reply(200, ataquesFairy);
+    
+    const mockedGetDragon = _nock_("https://pokeapi.co")
+    .get("/api/v2/type/16")
+    .reply(200, ataquesDragon);
+    
   _dispatch_('load', document);
   
   _wait_for_(() => mockedGet.isDone(), function() {
@@ -109,7 +291,15 @@
       tipos.results[i].url.should.eql(lis[i].getAttribute("url"), "<u><b>El atributo url del li número " + i + " no tiene la URL correspondiente con el tipo</b></u>") 
     }
     
+    _dispatch_('click', document.querySelector("li"));
     
+    document.querySelector("p").innerHTML.should.eql(tipos.results[0].name + ": " + tipos.results[0].url, "<b><u>Al clickear en el primer tipo no aparece el texto '" + tipos.results[0].name + ": " + tipos.results[0].url + "'</u></b>")
+    
+    document.querySelector("p").innerHTML = ""
+    
+    _dispatch_('click', document.querySelectorAll("li")[3]);
+    
+    document.querySelector("p").innerHTML.should.eql(tipos.results[3].name + ": " + tipos.results[3].url, "<b><u>Al clickear en el primer tipo no aparece el texto '" + tipos.results[3].name + ": " + tipos.results[3].url + "'</u></b>")
    
   });
 });/*#tests>*/
