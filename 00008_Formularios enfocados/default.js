@@ -3,7 +3,7 @@
 });/*#script.js>*/
 /*<index.html#*/<html>
   <head>
-    
+    <script src="script.js"></script>
   </head>
   <body>
     <form>
