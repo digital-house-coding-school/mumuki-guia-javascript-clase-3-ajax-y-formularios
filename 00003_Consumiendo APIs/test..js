@@ -16,15 +16,15 @@
   _wait_for_(() => mockedGet.isDone(), function() {
     
     var cursos = [
-    "Desarrollo Web Full Stack",
-    "React JS",
-    "Desarrollo Mobile Android",
-    "Desarrollo Mobile IOS"
-  ]
+      "Desarrollo Web Full Stack",
+      "React JS",
+      "Desarrollo Mobile Android",
+      "Desarrollo Mobile IOS"
+    ]
     
-  var lis = document.querySelectorAll("li")
+    var lis = document.querySelectorAll("li")
   
-  cursos.length.should.eql(lis.length, "No hay la misma cantidad de elementos li como elementos retornados por la API")
+    cursos.length.should.eql(lis.length, "No hay la misma cantidad de elementos li como elementos retornados por la API")
   });
 });/*#tests>*/
 /*<options#*/output_ignore_scripts: true
