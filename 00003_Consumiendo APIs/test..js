@@ -24,7 +24,7 @@
     
     var lis = document.querySelectorAll("li")
   
-    cursos.length.should.eql(lis.length, "No hay la misma cantidad de elementos li como elementos retornados por la API")
+    cursos.length.should.eql(lis.length, "<b><u>No hay la misma cantidad de elementos li como elementos retornados por la API</u></b>")
   });
 });/*#tests>*/
 /*<options#*/output_ignore_scripts: true
