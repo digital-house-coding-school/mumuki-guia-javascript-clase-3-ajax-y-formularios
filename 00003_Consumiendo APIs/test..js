@@ -1,8 +1,6 @@
 /*<output#*//*#output>*/
 /*<tests#*/it("AJAX", function() {
   
-  false.should.eql(true, "Sarasa")
-  
   _nock_.cleanAll();
   
   const mockedGet = _nock_("https://dev.digitalhouse.com")
@@ -11,19 +9,29 @@
     
   _dispatch_('load', document);
   
-  _wait_for_(() => mockedGet.isDone(), () => {
-    var cursos = [
-      "Desarrollo Web Full Stack",
-      "React JS",
-      "Desarrollo Mobile Android",
-      "Desarrollo Mobile IOS"
-    ]
-    
-    var lis = document.querySelectorAll("li")
-    
-    cursos.length.should.eql(lis.length, "No hay la misma cantidad de elementos li como elementos retornados por la API")
+  var ongoing = true
+  
+  _wait_for_(() => mockedGet.isDone(), function() {
+    ongoing = false
   });
   
+  
+  while(ongoing) {
+    
+  }
+  
+  var cursos = [
+    "Desarrollo Web Full Stack",
+    "React JS",
+    "Desarrollo Mobile Android",
+    "Desarrollo Mobile IOS"
+  ]
+    
+  var lis = document.querySelectorAll("li")
+    
+  cursos.length.should.eql(lis.length, "No hay la misma cantidad de elementos li como elementos retornados por la API")
+  
+    
 });/*#tests>*/
 /*<options#*/output_ignore_scripts: true
 output_ignore_styles: true/*#options>*/
