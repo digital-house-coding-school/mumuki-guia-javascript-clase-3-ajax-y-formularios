@@ -112,7 +112,7 @@
     
     _dispatch_('click', document.querySelector("li"));
     
-    document.querySelector("p").innerHTML.should.eql("click!", "<b><u>Al clickear en el primer tipo no aparece la palabra 'click!'</u></b>" + document.querySelector("p").innerHTML)
+    document.querySelector("p").innerHTML.should.eql("click!", "<b><u>Al clickear en el primer tipo no aparece la palabra 'click!'</u></b>")
     
     document.querySelector("p").innerHTML = ""
     
