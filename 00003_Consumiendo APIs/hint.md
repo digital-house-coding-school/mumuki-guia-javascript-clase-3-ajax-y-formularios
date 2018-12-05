@@ -6,7 +6,7 @@ window.addEventListener("load", function() {
   fetch(url).then(function(response) {
     return response.json()
   }).then(function(data) {
-    cursos = data.data;
+    var cursos = data.data;
      
   }).catch(function(error) {
     
