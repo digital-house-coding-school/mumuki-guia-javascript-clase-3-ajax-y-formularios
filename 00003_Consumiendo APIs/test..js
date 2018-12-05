@@ -3,22 +3,16 @@
   
   _nock_.cleanAll();
   
-  const mockedGet = _nock_("https://dev.digitalhouse.com")
-    .get("/api/getCursoss")
+  const mockedGet = _nock_("https://foo.bar")
+    .get("/baz")
     .reply(200, {
-      "data": [
-        {
-          "curso":"Desarrollo Web Full Stack",
-          "id":1,
-          "descripcion":"Lorem Ipsum"
-        }
-      ]
+      "data": "HOLA"
     });
     
   _dispatch_('load', document);
   
   _wait_for_(() => mockedGet.isDone(), () => {
-    document.body.innerHTML.should.be.eql("Lorem Ipsum");
+    document.body.innerHTML.should.be.eql("HOLA");
   });
 })/*#tests>*/
 /*<options#*/output_ignore_scripts: true
