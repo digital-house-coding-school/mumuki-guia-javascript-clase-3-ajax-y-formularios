@@ -1,0 +1,3 @@
+function cambiarColor(autoJson, colorNuevo) {
+  
+}
