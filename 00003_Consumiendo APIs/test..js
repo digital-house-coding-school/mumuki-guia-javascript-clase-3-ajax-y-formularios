@@ -27,7 +27,7 @@
     cursos.length.should.eql(lis.length, "<b><u>No hay la misma cantidad de elementos li como elementos retornados por la API</u></b>")
     
     for (var i = 0; i < cursos.length; i++) {
-      cursos[i].should.eql(lis[i].innerHTML, "El li número " + i + " debería decir '" + cursos[i] + "' pero dice '" + lis[i].innerHTML + "'")
+      cursos[i].should.eql(lis[i].innerHTML, "<b><u>El li número " + i + " debería decir '" + cursos[i] + "' pero dice '" + lis[i].innerHTML + "'</u></b>")
     }
   });
 });/*#tests>*/
