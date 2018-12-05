@@ -5,6 +5,9 @@
   for (var i = 0; i < lis.length; i++) {
     lis[i].addEventListener("click", function() {
       document.querySelector("p").innerHTML = this.innerHTML + ": " + this.getAttribute("url")
+      
+      // Tu código va acá!!
+      
     });
   }  
     
