@@ -18,7 +18,7 @@
   _dispatch_('load', document);
   
   _wait_for_(() => mockedGet.isDone(), () => {
-    document.body.innerHTML.should.be.eql("Lorem Ipsum");
+    document.body.innerHTML.should.be.eql("Desarrollo Web Full Stack");
   });
   
 });/*#tests>*/
