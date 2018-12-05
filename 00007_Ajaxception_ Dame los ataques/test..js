@@ -2,99 +2,95 @@
 /*<tests#*/it("AJAX", function() {
   _nock_.cleanAll();
   
-  var tipos = {
-    "count": 20,
-    "next": null,
-    "previous": null,
-    "results": [
+  var ataques = {
+    "moves": [
         {
-            "name": "normal",
-            "url": "https://pokeapi.co/api/v2/type/1/"
+            "name": "dragon-rage",
+            "url": "https://pokeapi.co/api/v2/move/82/"
         },
         {
-            "name": "fighting",
-            "url": "https://pokeapi.co/api/v2/type/2/"
+            "name": "outrage",
+            "url": "https://pokeapi.co/api/v2/move/200/"
         },
         {
-            "name": "flying",
-            "url": "https://pokeapi.co/api/v2/type/3/"
+            "name": "dragon-breath",
+            "url": "https://pokeapi.co/api/v2/move/225/"
         },
         {
-            "name": "poison",
-            "url": "https://pokeapi.co/api/v2/type/4/"
+            "name": "twister",
+            "url": "https://pokeapi.co/api/v2/move/239/"
         },
         {
-            "name": "ground",
-            "url": "https://pokeapi.co/api/v2/type/5/"
+            "name": "dragon-claw",
+            "url": "https://pokeapi.co/api/v2/move/337/"
         },
         {
-            "name": "rock",
-            "url": "https://pokeapi.co/api/v2/type/6/"
+            "name": "dragon-dance",
+            "url": "https://pokeapi.co/api/v2/move/349/"
         },
         {
-            "name": "bug",
-            "url": "https://pokeapi.co/api/v2/type/7/"
+            "name": "dragon-pulse",
+            "url": "https://pokeapi.co/api/v2/move/406/"
         },
         {
-            "name": "ghost",
-            "url": "https://pokeapi.co/api/v2/type/8/"
+            "name": "dragon-rush",
+            "url": "https://pokeapi.co/api/v2/move/407/"
         },
         {
-            "name": "steel",
-            "url": "https://pokeapi.co/api/v2/type/9/"
+            "name": "draco-meteor",
+            "url": "https://pokeapi.co/api/v2/move/434/"
         },
         {
-            "name": "fire",
-            "url": "https://pokeapi.co/api/v2/type/10/"
+            "name": "roar-of-time",
+            "url": "https://pokeapi.co/api/v2/move/459/"
         },
         {
-            "name": "water",
-            "url": "https://pokeapi.co/api/v2/type/11/"
+            "name": "spacial-rend",
+            "url": "https://pokeapi.co/api/v2/move/460/"
         },
         {
-            "name": "grass",
-            "url": "https://pokeapi.co/api/v2/type/12/"
+            "name": "dragon-tail",
+            "url": "https://pokeapi.co/api/v2/move/525/"
         },
         {
-            "name": "electric",
-            "url": "https://pokeapi.co/api/v2/type/13/"
+            "name": "dual-chop",
+            "url": "https://pokeapi.co/api/v2/move/530/"
         },
         {
-            "name": "psychic",
-            "url": "https://pokeapi.co/api/v2/type/14/"
+            "name": "devastating-drake--physical",
+            "url": "https://pokeapi.co/api/v2/move/652/"
         },
         {
-            "name": "ice",
-            "url": "https://pokeapi.co/api/v2/type/15/"
+            "name": "devastating-drake--special",
+            "url": "https://pokeapi.co/api/v2/move/653/"
         },
         {
-            "name": "dragon",
-            "url": "https://pokeapi.co/api/v2/type/16/"
+            "name": "core-enforcer",
+            "url": "https://pokeapi.co/api/v2/move/687/"
         },
         {
-            "name": "dark",
-            "url": "https://pokeapi.co/api/v2/type/17/"
+            "name": "clanging-scales",
+            "url": "https://pokeapi.co/api/v2/move/691/"
         },
         {
-            "name": "fairy",
-            "url": "https://pokeapi.co/api/v2/type/18/"
-        },
-        {
-            "name": "unknown",
-            "url": "https://pokeapi.co/api/v2/type/10001/"
-        },
-        {
-            "name": "shadow",
-            "url": "https://pokeapi.co/api/v2/type/10002/"
+            "name": "dragon-hammer",
+            "url": "https://pokeapi.co/api/v2/move/692/"
         }
     ]
-}
+  }
   
   const mockedGet = _nock_("https://pokeapi.co")
-    .get("/api/v2/type/")
-    .reply(200, tipos);
+    .get("/api/v2/type/16")
+    .reply(200, ataques);
     
   _dispatch_('load', document);
+  
+  
+  var lis = document.querySelectorAll("li")
+  
+  for (var i = 0; i < lis.length; i++) {
+    _dispatch_('click', lis[i])
+  }
   
   
 
@@ -102,9 +98,7 @@
     
     
     
-    }).catch(function() {
-      
-    });
+    })
 
   
 });/*#tests>*/
