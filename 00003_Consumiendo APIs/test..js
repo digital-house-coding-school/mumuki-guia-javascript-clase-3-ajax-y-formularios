@@ -28,7 +28,7 @@
     
   var lis = document.querySelectorAll("li")
     
-  true.should.eql(true, "Soy un tarado")  
+  false.should.eql(true, "Soy un tarado")  
     
   cursos.length.should.eql(lis.length, "No hay la misma cantidad de elementos li como elementos retornados por la API")
   
