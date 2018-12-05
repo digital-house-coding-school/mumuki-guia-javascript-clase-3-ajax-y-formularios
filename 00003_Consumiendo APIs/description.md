@@ -35,4 +35,6 @@ Dicho de otro modo, el `<ul>` debería verse así:
 
 Para quienes se sientan valientes, pueden empezar con el ejercicio prácticamente en blanco. Sin embargo, como sabemos que el desafío es complejo les dejamos en la pista de abajo un molde que ya se encarga de obtener los cursos de la API para que luego puedan operar con esos cursos y crear los `<li>`
 
+Por último, si te encontrás muy trabado, en el próximo ejercicio encontrarás la solución :wink:
+
 ¡Muchos éxitos!
