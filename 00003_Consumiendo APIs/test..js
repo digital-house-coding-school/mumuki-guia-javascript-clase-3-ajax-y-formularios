@@ -1,6 +1,8 @@
 /*<output#*//*#output>*/
 /*<tests#*/it("AJAX", function() {
   
+  false.should.eql(true, "FUCK")
+  
   _nock_.cleanAll();
   
   const mockedGet = _nock_("https://dev.digitalhouse.com")
@@ -13,7 +15,7 @@
   
   _wait_for_(() => mockedGet.isDone(), function() {
     ongoing = false
-    false.should.eql(true, "FUCK")
+    
   });
   
   
