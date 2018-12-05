@@ -110,7 +110,15 @@
     }
     
     
+    _dispatch_('click', document.querySelector("li"));
     
+    document.querySelector("p").innerHTML.should.eql("click!", "<b><u>Al clickear en el primer tipo no aparece la palabra 'click!'</u></b>")
+    
+    document.querySelector("p").innerHTML = ""
+    
+    _dispatch_('click', document.querySelectorAll("li")[3]);
+    
+    document.querySelector("p").innerHTML.should.eql("click!", "<b><u>Al clickear en el cuarto tipo no aparece la palabra 'click!'</u></b>")
   });
 });/*#tests>*/
 /*<options#*/output_ignore_scripts: true
