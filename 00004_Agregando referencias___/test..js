@@ -106,7 +106,7 @@
     for (var i = 0; i < tipos.results.length; i++) {
       tipos.results[i].name.should.eql(lis[i].innerHTML, "<b><u>El li número " + i + " debería decir '" + tipos.results[i].name + "' pero dice '" + lis[i].innerHTML + "'</u></b>")
       
-      tipos.results[i].url.should.eql(lis[i].getAttribute("url"), "<u><b>El atributo url de los li número " + i + " no tiene la URL correspondiente con el tipo</b></u>") 
+      tipos.results[i].url.should.eql(lis[i].getAttribute("url"), "<u><b>El atributo url del li número " + i + " no tiene la URL correspondiente con el tipo</b></u>") 
     }
   });
 });/*#tests>*/
