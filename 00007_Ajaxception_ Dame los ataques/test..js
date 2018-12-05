@@ -274,27 +274,31 @@
   
   _wait_for_(() => mockedGet.isDone(), function() {
     
+       const mockedGetFairy = _nock_("https://pokeapi.co")
+    .get("/api/v2/type/18")
+    .reply(200, ataquesFairy);
     
-    var lis = document.querySelectorAll("li")
-  
-    tipos.results.length.should.eql(lis.length, "<b><u>No hay la misma cantidad de elementos li como elementos retornados por la API</u></b>")
+    _wait_for_(() => mockedGetFairy.isDone(), function() {  
+      var lis = document.querySelectorAll("li")
     
-    for (var i = 0; i < tipos.results.length; i++) {
-      tipos.results[i].name.should.eql(lis[i].innerHTML, "<b><u>El li número " + i + " debería decir '" + tipos.results[i].name + "' pero dice '" + lis[i].innerHTML + "'</u></b>")
+      tipos.results.length.should.eql(lis.length, "<b><u>No hay la misma cantidad de elementos li como elementos retornados por la API</u></b>")
       
-      tipos.results[i].url.should.eql(lis[i].getAttribute("url"), "<u><b>El atributo url del li número " + i + " no tiene la URL correspondiente con el tipo</b></u>") 
-    }
-    
-    _dispatch_('click', document.querySelectorAll("li")[15]);
-    
-    document.querySelector("p").innerHTML.should.eql(tipos.results[15].name + ": " + tipos.results[15].url, "<b><u>Al clickear en el primer tipo no aparece el texto '" + tipos.results[15].name + ": " + tipos.results[15].url + "'</u></b>")
-    
-    document.querySelector("p").innerHTML = ""
-    
-    _dispatch_('click', document.querySelectorAll("li")[17]);
-    
-    document.querySelector("p").innerHTML.should.eql(tipos.results[17].name + ": " + tipos.results[17].url, "<b><u>Al clickear en el primer tipo no aparece el texto '" + tipos.results[17].name + ": " + tipos.results[17].url + "'</u></b>")
-   
+      for (var i = 0; i < tipos.results.length; i++) {
+        tipos.results[i].name.should.eql(lis[i].innerHTML, "<b><u>El li número " + i + " debería decir '" + tipos.results[i].name + "' pero dice '" + lis[i].innerHTML + "'</u></b>")
+        
+        tipos.results[i].url.should.eql(lis[i].getAttribute("url"), "<u><b>El atributo url del li número " + i + " no tiene la URL correspondiente con el tipo</b></u>") 
+      }
+      
+      _dispatch_('click', document.querySelectorAll("li")[15]);
+      
+      document.querySelector("p").innerHTML.should.eql(tipos.results[15].name + ": " + tipos.results[15].url, "<b><u>Al clickear en el primer tipo no aparece el texto '" + tipos.results[15].name + ": " + tipos.results[15].url + "'</u></b>")
+      
+      document.querySelector("p").innerHTML = ""
+      
+      _dispatch_('click', document.querySelectorAll("li")[17]);
+      
+      document.querySelector("p").innerHTML.should.eql(tipos.results[17].name + ": " + tipos.results[17].url, "<b><u>Al clickear en el primer tipo no aparece el texto '" + tipos.results[17].name + ": " + tipos.results[17].url + "'</u></b>")
+    }); 
   });
 });/*#tests>*/
 /*<options#*/output_ignore_scripts: true
