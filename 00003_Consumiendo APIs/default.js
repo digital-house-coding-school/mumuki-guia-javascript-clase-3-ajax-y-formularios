@@ -1,0 +1,16 @@
+/*<script.js#*/window.addEventListener("load", function() {
+  
+  // Tu código va acá!!
+ 
+})/*#script.js>*/
+/*<index.html#*/<html>
+  <head>
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <h1>Mis Paises</h1>
+    <section>
+      
+    </section>
+  </body>
+</html>/*#index.html>*/
