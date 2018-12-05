@@ -14,19 +14,12 @@
     
     
   _dispatch_('load', document);
-  false.should.eql(true, "FUCK")
   
-  ongoing = true
+  
+  
   
   _wait_for_(() => mockedGet.isDone(), function() {
-    ongoing = false
-    
-  });
-  
-  
-
-  
-  var cursos = [
+    var cursos = [
     "Desarrollo Web Full Stack",
     "React JS",
     "Desarrollo Mobile Android",
@@ -35,9 +28,18 @@
     
   var lis = document.querySelectorAll("li")
     
+  true.should.eql(true, "Soy un tarado")  
+    
   cursos.length.should.eql(lis.length, "No hay la misma cantidad de elementos li como elementos retornados por la API")
   
     
+    
+  });
+  
+  
+
+  
+  
 });/*#tests>*/
 /*<options#*/output_ignore_scripts: true
 output_ignore_styles: true/*#options>*/
