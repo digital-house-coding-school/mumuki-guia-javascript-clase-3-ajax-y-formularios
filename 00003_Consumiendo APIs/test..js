@@ -13,6 +13,7 @@
   
   _wait_for_(() => mockedGet.isDone(), function() {
     ongoing = false
+    false.should.eql(true, "FUCK")
   });
   
   
