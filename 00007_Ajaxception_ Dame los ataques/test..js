@@ -278,7 +278,7 @@
     
   _dispatch_('load', document);
   
-  _wait_for_(function() { mockedGet.isDone();mockedGetFairy.isDone();mockedGetDragon.isDone()}, function() {
+  _wait_for_(() => mockedGet.isDone(), function() {
     
     
     var lis = document.querySelectorAll("li")
