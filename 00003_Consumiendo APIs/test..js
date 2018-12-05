@@ -16,7 +16,7 @@
   _dispatch_('load', document);
   
   
-  false.should.eql(true, "Soy un tarado")  
+  
   
   _wait_for_(() => mockedGet.isDone(), function() {
     var cursos = [
@@ -37,7 +37,7 @@
   });
   
   
-
+false.should.eql(true, "Soy un tarado")  
   
   
 });/*#tests>*/
