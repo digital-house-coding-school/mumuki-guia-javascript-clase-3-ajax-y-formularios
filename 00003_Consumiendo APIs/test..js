@@ -12,9 +12,9 @@
   }
   
   _nock_.cleanAll();
-  const mockedGet = _nock_("https://api-peliculas-dh/")
-    .get("/peliculas")
-    .reply(200, peliculas);
+  const mockedGet = _nock_("https://some-domain.com/")
+    .get("/some-data.json")
+    .reply(200, { content: "Some remote data" });
 })/*#tests>*/
 /*<options#*/output_ignore_scripts: true
 output_ignore_styles: true/*#options>*/
