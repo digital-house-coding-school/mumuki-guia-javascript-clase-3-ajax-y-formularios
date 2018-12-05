@@ -1,9 +1,11 @@
 /*<output#*//*#output>*/
 /*<tests#*/it("AJAX", function() {
   
-  false.should.eql(true, "FUCK")
+  
   
   _nock_.cleanAll();
+  
+  false.should.eql(true, "FUCK")
   
   const mockedGet = _nock_("https://dev.digitalhouse.com")
     .get("/api/getCursos")
