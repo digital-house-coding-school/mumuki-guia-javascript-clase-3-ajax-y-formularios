@@ -12,9 +12,11 @@ describe("Ejercicio 2", function() {
     
     miAuto = JSON.parse(miAuto)
     
+    assert(false, "sarasa")
+    
     assert(typeof miAuto === 'object', "El string devuelto no parecería representar un objeto válido de JS. ¿Es un JSON válido?")
     
-    assert(false, "sarasa")
+    
     
     assert('marca' in miAuto, "El objeto devuelto no tiene marca.")
     
