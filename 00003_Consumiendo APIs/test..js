@@ -9,7 +9,7 @@
     
   _dispatch_('load', document);
   
-  var ongoing = true
+  ongoing = true
   
   _wait_for_(() => mockedGet.isDone(), function() {
     ongoing = false
