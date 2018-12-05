@@ -291,15 +291,15 @@
       tipos.results[i].url.should.eql(lis[i].getAttribute("url"), "<u><b>El atributo url del li número " + i + " no tiene la URL correspondiente con el tipo</b></u>") 
     }
     
-    _dispatch_('click', document.querySelector("li"));
+    _dispatch_('click', document.querySelectorAll("li")[15]);
     
-    document.querySelector("p").innerHTML.should.eql(tipos.results[0].name + ": " + tipos.results[0].url, "<b><u>Al clickear en el primer tipo no aparece el texto '" + tipos.results[0].name + ": " + tipos.results[0].url + "'</u></b>")
+    document.querySelector("p").innerHTML.should.eql(tipos.results[15].name + ": " + tipos.results[15].url, "<b><u>Al clickear en el primer tipo no aparece el texto '" + tipos.results[15].name + ": " + tipos.results[15].url + "'</u></b>")
     
     document.querySelector("p").innerHTML = ""
     
-    _dispatch_('click', document.querySelectorAll("li")[3]);
+    _dispatch_('click', document.querySelectorAll("li")[17]);
     
-    document.querySelector("p").innerHTML.should.eql(tipos.results[3].name + ": " + tipos.results[3].url, "<b><u>Al clickear en el primer tipo no aparece el texto '" + tipos.results[3].name + ": " + tipos.results[3].url + "'</u></b>")
+    document.querySelector("p").innerHTML.should.eql(tipos.results[17].name + ": " + tipos.results[17].url, "<b><u>Al clickear en el primer tipo no aparece el texto '" + tipos.results[17].name + ": " + tipos.results[17].url + "'</u></b>")
    
   });
 });/*#tests>*/
