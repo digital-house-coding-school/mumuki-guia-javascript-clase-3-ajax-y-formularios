@@ -16,7 +16,7 @@
   _dispatch_('load', document);
   
   
-  
+  false.should.eql(true, "Soy un tarado")  
   
   _wait_for_(() => mockedGet.isDone(), function() {
     var cursos = [
@@ -28,7 +28,7 @@
     
   var lis = document.querySelectorAll("li")
     
-  false.should.eql(true, "Soy un tarado")  
+  
     
   cursos.length.should.eql(lis.length, "No hay la misma cantidad de elementos li como elementos retornados por la API")
   
