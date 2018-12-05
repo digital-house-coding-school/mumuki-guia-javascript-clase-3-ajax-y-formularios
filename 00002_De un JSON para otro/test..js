@@ -14,6 +14,8 @@ describe("Ejercicio 2", function() {
     
     assert(typeof miAuto === 'object', "El string devuelto no parecería representar un objeto válido de JS. ¿Es un JSON válido?")
     
+    assert(false, "sarasa")
+    
     assert('marca' in miAuto, "El objeto devuelto no tiene marca.")
     
     assert(miAuto.marca === "Renault", "La marca del auto no es la misma que la que fue recibida")
