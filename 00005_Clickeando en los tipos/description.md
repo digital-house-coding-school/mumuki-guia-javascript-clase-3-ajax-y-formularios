@@ -10,6 +10,6 @@ El foco para este ejercicio sería:
 
 > 1. Obtener del DOM todas las etiquetas `<li>`
 
-> 2. **Para cada una de ellas** debemos definir el evento
+> 2. **Para cada una de ellas** debemos definir el evento. No olvides hacerlo mediante `addEventListener`
 
 Notese que dejamos una referencia de donde debería ir el código ya que estos eventos podemos asignarlos posterior a la creación de las etiquetas `<li>`
