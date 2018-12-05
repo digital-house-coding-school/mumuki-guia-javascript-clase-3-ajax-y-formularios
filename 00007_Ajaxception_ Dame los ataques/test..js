@@ -86,11 +86,8 @@
   _dispatch_('load', document);
   
   
-  var lis = document.querySelectorAll("li")
-  
-  for (var i = 0; i < lis.length; i++) {
-    _dispatch_('click', lis[i])
-  }
+ 
+    _dispatch_('click', document.querySelector("li"))
   
   
 
