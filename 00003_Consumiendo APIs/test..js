@@ -1,6 +1,8 @@
 /*<output#*//*#output>*/
 /*<tests#*/it("AJAX", function() {
   
+  false.should.eql(true, "Sarasa")
+  
   _nock_.cleanAll();
   
   const mockedGet = _nock_("https://dev.digitalhouse.com")
