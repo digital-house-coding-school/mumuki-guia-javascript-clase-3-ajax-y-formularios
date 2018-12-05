@@ -10,7 +10,7 @@
   
   _wait_for_(() => mockedGet.isDone(), () => {
     
-    done();
+    
   });
 })/*#tests>*/
 /*<options#*/output_ignore_scripts: true
