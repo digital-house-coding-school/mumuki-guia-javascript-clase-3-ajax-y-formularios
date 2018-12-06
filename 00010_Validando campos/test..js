@@ -24,6 +24,8 @@
   
   true.should.eql(hayUltimaAlerta, "Si se deja un campo vacío debería haber alertas...")
   
+  true.should.eql(false, "saras")
+  
   _last_alert_message_.shoud.eql("Dejaste el campo nombre vacio", "No se esta enviado el mensaje correcto si se deja el nombre vacío")
   
   inputs[0].value = "sarasa"
