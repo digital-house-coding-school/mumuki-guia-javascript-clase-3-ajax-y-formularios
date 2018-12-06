@@ -22,9 +22,9 @@
   
   hayUltimaAlerta = _last_alert_message_ !== null
   
-  true.should.eql(false, "sarasa")
-  
   true.should.eql(hayUltimaAlerta, "Si se deja un campo vacío debería haber alertas...")
+  
+  true.should.eql(false, "sarasa")
   
   hayUltimaAlerta.shoud.eql("Dejaste el campo nombre vacio", "No se esta enviado el mensaje correcto si se deja el nombre vacío")
   
