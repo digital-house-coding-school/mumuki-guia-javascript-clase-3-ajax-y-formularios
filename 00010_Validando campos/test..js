@@ -12,7 +12,7 @@
   
   var hayUltimaAlerta = _last_alert_message_ !== null
   
-  true.should.eql(!hayUltimaAlerta, "Si el formulario esta lleno no deberías enviar ninguna alerta")
+  true.should.eql(!hayUltimaAlerta, "Si el formulario esta lleno no deberías enviar ninguna alerta" + _last_alert_message)
   
   inputs[0].value = ""
   
