@@ -13,6 +13,14 @@
   var hayUltimaAlerta = _last_alert_message_ !== null
   
   true.should.eql(!hayUltimaAlerta, "Si el formulario esta lleno no deberías enviar ninguna alerta")
+  
+  inputs[0].value = ""
+  
+  _dispatch_("submit", document.querySelector("form"))
+  
+  var hayUltimaAlerta = _last_alert_message_ !== null
+  
+  true.should.eql(hayUltimaAlerta, "Si se deja un campo vacío debería haber alertas...")
  
 });/*#tests>*/
 /*<options#*/output_ignore_scripts: true
