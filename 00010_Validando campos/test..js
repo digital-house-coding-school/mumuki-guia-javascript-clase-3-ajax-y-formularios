@@ -23,10 +23,9 @@
   hayUltimaAlerta = _last_alert_message_ !== null
   
   true.should.eql(hayUltimaAlerta, "Si se deja un campo vacío debería haber alertas...")
+
   
-  true.should.eql(false, "saras" + _last_alert_message_)
-  
-  _last_alert_message_.shoud.eql("Dejaste el campo nombre vacio", "No se esta enviado el mensaje correcto si se deja el nombre vacío")
+  _last_alert_message_.should.eql("Dejaste el campo nombre vacio", "No se esta enviado el mensaje correcto si se deja el nombre vacío")
   
   
   
@@ -35,7 +34,7 @@
   
   _dispatch_("submit", document.querySelector("form"))
   
-  _last_alert_message_.shoud.eql("Dejaste el campo email vacio", "No se esta enviado el mensaje correcto si se deja el email vacío")
+  _last_alert_message_.should.eql("Dejaste el campo email vacio", "No se esta enviado el mensaje correcto si se deja el email vacío")
  
 });/*#tests>*/
 /*<options#*/output_ignore_scripts: true
