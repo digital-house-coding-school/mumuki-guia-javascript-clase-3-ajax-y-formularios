@@ -4,11 +4,15 @@
   
   _dispatch_("focus", document.querySelectorAll("input")[0])
   
-  document.querySelectorAll("input")[0].style.border.should.eql("3px solid blue", "Al hacer foco sobre el primer input no se agrega el borde esperado")
+  var hayUltimaAlerta = _last_alert_message_ !== null
   
-  _dispatch_("blur", document.querySelectorAll("input")[0])
+  true.should.eql(hayUltimaAlerta, "<b><u>¿Llamaste a la función alert al hacer focus en el primer input?</u></b>")
   
-  document.querySelectorAll("input")[0].style.border.should.eql("none", "Al quitar el foco sobre el primer input no se quita el borde")
+  _last_alert_message_.should.eql("Complete su nombre", "<b><u>La alerta debería decir 'Complete su nombre' al hacer foco en el primer campo</u></b>")
+  
+  _dispatch_("focus", document.querySelectorAll("input")[1])
+  
+  _last_alert_message_.should.eql("Complete su email", "<b><u>La alerta debería decir 'Complete su email' al hacer foco en el segundo campo</u></b>")
  
 });/*#tests>*/
 /*<options#*/output_ignore_scripts: true
