@@ -16,7 +16,7 @@
   
   _dispatch_("blur", document.querySelectorAll("input")[1])
   
-  document.querySelectorAll("input")[1].style.border.should.eql("none", "Al quitar el foco sobre el primer segundo input no se quita el borde")
+  document.querySelectorAll("input")[1].style.border.should.eql("none", "Al quitar el foco sobre el segundo input no se quita el borde")
   
   
   
