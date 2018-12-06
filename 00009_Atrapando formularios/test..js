@@ -1,5 +1,5 @@
 /*<output#*//*#output>*/
-/*<tests#*/it("Carrousel", function() {
+/*<tests#*/it("Formularios", function() {
   _dispatch_('load', document);
   
   _dispatch_("submit", document.querySelector("form"))
