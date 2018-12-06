@@ -16,13 +16,13 @@
   
   true.should.eql(!hayUltimaAlerta, "Si el formulario esta lleno no deberías enviar ninguna alerta")
   
-  true.should.eql(false, "sarasa")
-  
   inputs[0].value = ""
   
   _dispatch_("submit", document.querySelector("form"))
   
   hayUltimaAlerta = _last_alert_message_ !== null
+  
+  true.should.eql(false, "sarasa")
   
   true.should.eql(hayUltimaAlerta, "Si se deja un campo vacío debería haber alertas...")
   
