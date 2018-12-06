@@ -18,7 +18,7 @@
   
   _dispatch_("submit", document.querySelector("form"))
   
-  var hayUltimaAlerta = _last_alert_message_ !== null
+  hayUltimaAlerta = _last_alert_message_ !== null
   
   true.should.eql(hayUltimaAlerta, "Si se deja un campo vacío debería haber alertas...")
   
